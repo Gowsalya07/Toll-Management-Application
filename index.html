@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+   
+    <link rel="stylesheet" href="style.css" /><br><br>
+    <title>TOLL MANAGEMNET</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <h2><b>TOLL MANAGEMENT APPLICATION</b></h2><br><hr><br>
+            <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+        
+        <div class="nav__link hide">
+          <button  id="myBtn" >Add Toll Page</button>
+          <button  id="myBtn1">All Vehicle Page</button>
+          <button>
+          <a href="vehiclelist.html">Toll List Page</a></button>
+        </div>
+      </nav>
+    </header>
+    <b><h3>Toll entries/Vehicle entries</h3></b>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for toll">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:25%;">Vehicle Type</th>
+    <th style="width:25%;">Toll Name</th>
+    <th style="width:25%;">Vehicle Number</th>
+    <th style="width:25%;">Date/Time</th>
+    <th style="width:25%;">Tariff</th>
+  </tr>
+  <tr>
+    <td>Car/jeep/van</td>
+    <td>Chengalpattu</td>
+    <td>TN24A4644</td>
+    <td>09/09/2022 16:43:48</td>
+    
+    <td>60</td>
+  </tr>
+  <tr>
+    <td>Car/jeep/van</td>
+    <td>Kappalur</td>
+    <td>TN24A1234</td>
+    <td>09/09/2022 16:43:34</td>
+  
+    <td>75</td>
+  </tr>
+  <tr>
+    <td>Heavy vehicle</td>
+    <td>Kappalur</td>
+    <td>TN24A1234</td>
+    <td>09/09/2022 16:43:34</td>
+    
+    <td>400</td>
+  </tr>
+
+ 
+</table>
+
+
+    
+<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form action="action_page.php">
+    <h4 text-align="center">Add New Toll</h4><br>
+      <label for="fname">Toll Name</label><br>
+      <input type="text" id="fname" name="firstname" placeholder="Enter a Toll Name" required><br>
+  
+      
+  
+      <label for="fare">Vehicle Fare Details</label><br>
+
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th></tr><tr>
+          <td>
+      <select id="country" name="country" width="20px" height="20px" required>
+        <option value="Select vehicle type">Select Vehicle Type</option>
+        <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+        <option value="LCV">LCV</option>
+        <option value="Truck/Bus">Truck/Bus</option>
+        <option value="Heavy vehicle">Heavy vehicle        </option>
+      </select></td>
+      <td>
+        <input type="number" id="lname" name="lastname" placeholder="Start journey" required>
+      </td>
+      <td>
+        <input type="number" id="rname" name="returnname" placeholder="Return journey" required>
+      </td></tr>
+      <tr>
+      <td>
+        <select id="country" name="country">
+          <option value="Select vehicle type">Select Vehicle Type</option>
+          <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+          <option value="LCV">LCV</option>
+          <option value="Truck/Bus">Truck/Bus</option>
+          <option value="Heavy vehicle">Heavy vehicle        </option>
+        </select></td>
+        <td>
+          <input type="number" id="lname" name="lastname" placeholder="Start journey">
+        </td>
+        <td>
+          <input type="number" id="rname" name="returnname" placeholder="Return journey">
+        </td></tr>
+        <tr>
+        <td>
+          <select id="country" name="country">
+            <option value="Select vehicle type">Select Vehicle Type</option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle        </option>
+          </select></td>
+          <td>
+            <input type="number" id="lname" name="lastname" placeholder="Start journey">
+          </td>
+          <td>
+            <input type="number" id="rname" name="returnname" placeholder="Return journey">
+          </td></tr>
+          <tr>
+          <td>
+            <select id="country" name="country">
+              <option value="Select vehicle type">Select Vehicle Type</option>
+              <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+              <option value="LCV">LCV</option>
+              <option value="Truck/Bus">Truck/Bus</option>
+              <option value="Heavy vehicle">Heavy vehicle        </option>
+            </select></td>
+            <td>
+              <input type="number" id="lname" name="lastname" placeholder="Start journey">
+            </td>
+            <td>
+              <input type="number" id="rname" name="returnname" placeholder="Return journey">
+            </td>
+      </tr></table>
+      <input type="submit" value="Add Details">
+  
+    </form>
+  </div>
+  </div>
+
+
+
+
+    <div id="myModal1" class="modal">
+
+      <div class="modal-content">
+       
+
+    <form action="action_page.php">
+    <h4 text-align="center">Add New Toll</h4><br>
+    <label for="fname">Select Toll Name</label><br>
+    <select id="country" name="country" required>
+      <option value="kappalur">Kappalur</option>
+      <option value="chengalpattu">Chengalpattu</option>
+      <option value="chennai">Chennai</option>
+    </select><br>
+    <label for="lname">Select Vehicle Type</label><br>
+    <select id="country" name="country" required>
+      <option value="car/jeep/van">Car/Jeep/Van</option>
+      <option value="LCV">LCV</option>
+      <option value="Truck/Bus">Truck/Bus</option>
+      <option value="heavyvehicles">Heavy vehicles</option>
+    </select><br>
+    <label for="rname">Vehicle Number</label><br><br>
+    <input type="number" id="rname" name="returnname" placeholder="Enter Your Login id" required><br><br>
+    <label for="tname">Tariff</label><br><br>
+    <input type="number" id="tname" name="tname" placeholder="Tariff Amount" required>
+<br><br>
+    <input type="submit" value="Add Entry">
+  
+  </form>
+</div>
+</div>
+
+  </body>
+
+  <script src="./script.js"></script>
+</html>
